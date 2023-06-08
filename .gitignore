@@ -1,4 +1,4 @@
+*.jpg
+*.png
+venv/
 __pycache__/
-.jpg
-.png
-venv
