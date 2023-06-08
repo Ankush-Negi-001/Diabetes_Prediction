@@ -1,0 +1,29 @@
+body{
+    background: url('../static/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+    height: 100%;
+}
+
+.content{
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: rgba(233, 205, 233, 0.814);
+    margin: 10em 5em;
+    padding: 10px 30px;
+    border: 1px solid black;
+
+}
+#heading{
+    color: rgba(181, 10, 28, 0.838);
+    text-align: center;
+    font-weight: bold;
+}
+form{
+    padding-top : 2em;
+    margin: auto 5em;
+    font-size: 20px;
+    font-weight: bold;
+}
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Diabetes Predictor</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/style.css') }}">
+    
+    <!-- CSS -->
+    <link href="../static/style.css" type="text/css" rel="stylesheet">
+    <script src="../static/script.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="content">
+            <h1 id="heading"> DIABETES PREDICTOR </h1>
+            <hr style="border-color: black;">
+        <form action = "{{ url_for('predict')}}" method = "POST" class = "form-horizontal">
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="text2" class="control-label">Glucose</label> 
+                    <input type="text" id="Glucose" name="Glucose" class="form-control" placeholder="Glucose " required>
+                </div>
+            
+                <div class="col-md-6">
+                    <label for="text5" class="control-label">Insulin</label> 
+                    <input type="text" id="Insulin" name="Insulin" class="form-control" placeholder="Insulin" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="text6" class="control-label">BMI</label> 
+                    <input type="text" id="BMI" name="BMI" class="form-control" placeholder="BMI " required>
+                </div>
+                <div class="col-md-6">
+                    <label for="text8" class="control-label">Age</label> 
+                    <input type="text" id="Age" name="Age" class="form-control" placeholder="Age " required>
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-primary btn btn-sm">Predict</button>
+                </div>
+            </div>
+        </form> <br><br>    
+        {{prediction_text}} 
+    </div>  
+</body>
+</html>
